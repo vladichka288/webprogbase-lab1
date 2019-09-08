@@ -1,0 +1,245 @@
+            body {
+               background-color:rgb(53, 56, 57)     
+            }         
+            @font-face{
+              font-family: 'lol';
+              src: url(../../../../fonts/OpenSans-LightItalic.ttf);
+    
+          }
+
+            .menu{
+               margin-top :150px
+            }
+            .menu > ul{
+              justify-content:  center ;
+   
+            }
+            .menu > ul  li {
+              list-style-type:  none;             
+            }
+            .menu >ul li a {
+            border-radius: 20px;
+            list-style-type:  none;
+            display : block;
+            background-color:rgb(53, 56, 57);
+            padding: 15px 30px 15px 40px;
+            width: 150px; 
+            color:white;
+            font-family: lol;
+            font-size: 30px;
+            font-weight: bold;
+            text-decoration: none;
+            line-height: 2cm;
+
+            }
+            
+            .menu   a:hover {
+             background: white;
+             transition: all 0.7s ease; 
+             color: black;
+             
+             }
+           
+
+
+
+            .main{
+              position: absolute;
+              bottom: 150px;
+              left: 400px;
+            }
+            .main_users{
+              bottom: 350px;
+              width: 610px;
+            }
+            table {
+              border: 1px solid black;
+              border-radius: 25px;
+              position: absolute;
+              top : 175px;
+              left: 900px;
+              font-family: Tahoma, Verdana,  sans-serif;
+              font-size: 25px;
+              color: white;
+            }
+            table th {
+             
+            border-radius: 25px;
+            text-align: center;    
+            padding: 60px;   
+
+            }
+            table td {
+             
+              border-radius: 25px;
+              text-align: center;
+              padding: 60px;
+            
+            }
+            table a{
+              color :grey;
+              border-radius: 5px;
+              text-decoration: none;
+            }
+          table td:hover{
+            background-color: white;
+            transition: 0.5s;
+            color:black;
+          }
+          table th:hover{
+            background-color: white;
+            transition: 0.5s;
+            color:black;
+          }
+          table a:hover{
+          
+            transition: 0.5s;
+            font-weight: bold;
+            color:black;
+            
+          }
+          .entities{
+            left: 1000px;
+          }
+          video{
+            border-radius: 25px;
+            position: absolute;
+            left:550px;
+            top:200px;  
+            width:300;
+            height:400px; 
+            
+          }
+         
+          .user_main{
+            
+            width: 400px;
+            height: 500px;
+            border-radius: 30px;
+            position: absolute;
+            top:175px;
+            left:300px;
+            border: 3px solid black;
+          }
+          .user_main > img{
+              position: fixed;
+              left:50px;
+              top:10px;
+              width:300px;
+              height: 300px;
+              position: absolute;        
+              border-radius: 50%;
+              text-align: center;             
+              border: 1px solid black;
+          }
+
+           .button_user{
+            position: absolute;
+            top: 575px;
+            width:400px;
+            height:100px;
+            border-radius: 30px;
+            background-color: black;
+            color:white;  
+            font-size: 30px;          
+           }
+           
+           button .active_button{
+            display: none;
+      
+           }
+           button:hover .passive_button{
+            display: none;
+            
+           }
+           button:hover .active_button{
+            display: inline;
+            
+           }
+
+           
+            
+
+
+            #example1 { margin: 0 0 0 0; }
+          
+           
+            h1 {font-family: lol;
+               font-weight: bold;
+               font-size: 30px
+              }
+             
+              .text {
+                font-family: Tahoma, Verdana,  sans-serif;
+                color: white;
+                direction: rtl;
+                letter-spacing: 2.5cm;
+                word-spacing: 1cm;
+                text-indent: 10px;
+                text-decoration: none;
+                text-transform: capitalize;
+                white-space: pre;
+                font-size: 100px;
+                font-weight: bold;
+              
+                line-height: 1.5em;
+                text-align: left;
+                
+                src: url(../../../../fonts/OpenSans-LightItalic.ttf);
+            }
+            .description {
+              letter-spacing: 0.1cm;
+              line-height: 1cm;
+              font-weight: normal;
+              font-size: 50px;
+              border-radius: 15px;
+              
+              
+
+            }
+            .description_section{
+              width: 400px;
+              
+              position: absolute;
+              top:150px;
+              right:8%;          
+            }
+
+             .simple_text{
+              font-family: 'Courier New', Courier, monospace;
+              color:white;
+              font-size: 20px;
+              background-color:none;
+              border-radius: 15px;
+             
+            }
+            .description_section p:hover{
+              background-color: white;
+              color:black;
+              transition: 0.3s;
+            }
+            footer{
+              width:100%;
+              position: absolute;
+              top: 1200px;
+              height: 800px;
+              border-top-left-radius: 30px;
+              border-top-right-radius: 30px;
+              background-color:rgb(152, 143, 143);
+              
+            }
+            hr{
+              border: none; 
+              background-color: white;
+              height: 2px;
+             
+            }
+            footer div{
+              position: absolute;
+              bottom:70px;
+              left: 400px;
+              width:1200px;
+              height: 200px;
+            }
+
+           
