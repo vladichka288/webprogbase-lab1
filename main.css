@@ -6,10 +6,10 @@
               src: url(../../../../fonts/OpenSans-LightItalic.ttf);
     
           }
-
-            .menu{
-               margin-top :150px
+            .menu {
+              min-width: 400px;
             }
+         
             .menu > ul{
               justify-content:  center ;
    
@@ -30,6 +30,7 @@
             font-weight: bold;
             text-decoration: none;
             line-height: 2cm;
+            
 
             }
             
@@ -39,25 +40,15 @@
              color: black;
              
              }
-           
 
-
-
-            .main{
-              position: absolute;
-              bottom: 150px;
-              left: 400px;
-            }
+            
             .main_users{
               bottom: 350px;
               width: 610px;
             }
             table {
-              border: 1px solid black;
+              
               border-radius: 25px;
-              position: absolute;
-              top : 175px;
-              left: 900px;
               font-family: Tahoma, Verdana,  sans-serif;
               font-size: 25px;
               color: white;
@@ -98,57 +89,55 @@
             color:black;
             
           }
-          .entities{
-            left: 1000px;
-          }
+          
           video{
             border-radius: 25px;
-            position: absolute;
-            left:550px;
-            top:200px;  
-            width:300;
-            height:400px; 
-            
+            margin-left: 250px;
+            width:500px;
+
           }
+
          
-          .user_main{
-            
-            width: 400px;
-            height: 500px;
-            border-radius: 30px;
-            position: absolute;
-            top:175px;
-            left:300px;
+          .user_main{            
+            border-radius: 30px;           
             border: 3px solid black;
           }
           .user_main > img{
-              position: fixed;
-              left:50px;
-              top:10px;
+              
               width:300px;
-              height: 300px;
-              position: absolute;        
+              height:300px;  
               border-radius: 50%;
-              text-align: center;             
+              margin-left: 45px;
+              margin-top: 0px;
+                     
               border: 1px solid black;
           }
 
            .button_user{
-            position: absolute;
-            top: 575px;
+          
+            
             width:400px;
             height:100px;
             border-radius: 30px;
             background-color: black;
             color:white;  
-            font-size: 30px;          
+            font-size: 30px;
+            text-align: center;
+            
+                    
+           }
+            .container_button{
+            display: flex;
+            flex-direction: column;
            }
            
            button .active_button{
+             text-align: center;
             display: none;
       
            }
            button:hover .passive_button{
+            
             display: none;
             
            }
@@ -156,6 +145,7 @@
             display: inline;
             
            }
+          
 
            
             
@@ -166,7 +156,7 @@
            
             h1 {font-family: lol;
                font-weight: bold;
-               font-size: 30px
+               font-size: 30px;
               }
              
               .text {
@@ -181,7 +171,7 @@
                 white-space: pre;
                 font-size: 100px;
                 font-weight: bold;
-              
+                
                 line-height: 1.5em;
                 text-align: left;
                 
@@ -200,9 +190,8 @@
             .description_section{
               width: 400px;
               
-              position: absolute;
-              top:150px;
-              right:8%;          
+             
+                    
             }
 
              .simple_text{
@@ -219,27 +208,50 @@
               transition: 0.3s;
             }
             footer{
+              margin-top: 300px;
               width:100%;
-              position: absolute;
-              top: 1200px;
-              height: 800px;
+              flex-direction: column;
               border-top-left-radius: 30px;
               border-top-right-radius: 30px;
               background-color:rgb(152, 143, 143);
-              
+             
             }
+            
             hr{
               border: none; 
               background-color: white;
               height: 2px;
              
             }
-            footer div{
-              position: absolute;
-              bottom:70px;
-              left: 400px;
-              width:1200px;
-              height: 200px;
+            footer{
+              padding-bottom: 20px;
             }
+            .container {
+              display: flex;
+              flex-direction: row;              
+              margin-top: 50px;
+            }
+            .container h1 {
+              display: flex;
+              flex-direction: row;
+              margin-right:100px;
+              margin-top: 0px;
+            }
+            
+            footer div{
+              flex-direction: column;
+              margin-top:100px; 
+            }
+            .new_container{
+              justify-content: start;
+            }
+            .adapt{
+              flex-direction: column;
+              margin-top: 50px;
+            }
+            div .container .videoDescription{
+              flex-direction: column;
+              margin-left: 50px;
 
+            } 
            
