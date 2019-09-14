@@ -1,0 +1,712 @@
+МIНIСТЕРСТВО  ОСВIТИ  І  НАУКИ  УКРАЇНИ
+
+МIНIСТЕРСТВО  ОСВIТИ  І  НАУКИ  УКРАЇНИ
+НАЦІОНАЛЬНИЙ   ТЕХНІЧНИЙ   УНІВЕРСИТЕТ   УКРАЇНИ
+“КИЇВСЬКИЙ  ПОЛІТЕХНІЧНИЙ  ІНСТИТУТ 
+ІМЕНІ ІГОРЯ СІКОРСЬКОГО”
+
+
+Факультет прикладної математики
+Кафедра програмного забезпечення комп’ютерних систем
+
+
+
+
+Лабораторна робота № 1
+з дисципліни “ Основи програмування ”
+тема “ Модулі ”
+
+
+
+
+
+
+
+
+
+
+
+Виконав
+студент 2 курсу
+групи КП-83
+Бойчук Владислав Андрійович
+
+
+варіант №1
+                                                                                               
+
+Перевірив
+“____” “____________” 20___ р.
+викладач
+Гадиняк Руслан Анатолійович
+		
+
+
+
+
+
+
+Мета роботи
+
+Познайомитись із поняттям веб-документів та технологіями їх створення і стилізації.
+Опублікувати статичний веб-сайт на одній із безплатних веб-платформ.
+Постановка завдання
+
+Потрібно:
+    1. Створити на BitBucket репозиторій А і налаштувати його інтеграцію з сайтом Progbase.
+    2. Підготувати на GitHub репозиторій B:
+        ◦ Зареєструватись на GitHub (отримати GH_USERNAME).
+        ◦ Створити на GitHub публічний репозиторій B з назвою webprogbase-lab1 та файлом README.md.
+        ◦ Додати у кореневу директорію B файл index.html (вміст файлу можна взяти з Додатків даного завдання).
+        ◦ Перейти в налаштування репозиторія  Bна GitHub (Settings -> GitHub Pages) і змінити Source із None на master branch.
+Зберегти зміни (Save) і через деякий час на сторінці з'явиться посилання на опублікований сайт (див. Приклади).
+        ◦ Перевірити створений веб-сайт по шляху (B_SITE_URL):  
+https://GH_USERNAME.github.io/webprogbase-lab1/,
+де GH_USERNAME- ваш логін на GitHub.
+Зверніть увагу, що слеш (/) вкінці URL є обов'язковим.
+    3. Прив'язати репозиторій B до A:
+        ◦ Перейти у терміналі до кореневої директорії A.
+        ◦ Додати B як підмодуль A командою: в git submodule add B_REPO_URL labs/lab1,
+де B_REPO_URL - URL репозиторія B на GitHub.
+Це прив'яже B до A і виконає клон B у директорію labs/lab1 локального A.
+        ◦ Із кореневої директорії A виконати збереження змін і синхронізувати локальний репозиторій A із віддаленим.
+        ◦ Впевнитись, що на сторінці даного завдання з'явилась інформація про надіслане рішення.
+    4. Встановити Jekyll а допомогою команди: sudo apt-get install jekyll
+
+
+
+
+
+	 	 	 	
+
+
+
+
+
+Index.html
+<!doctype html>
+<html lang="en">
+
+<head>
+
+<meta charset="utf-8">
+<title>Vladich Bub</title>
+<link rel="stylesheet" href="css/font-awesome.css">
+<meta name="description" content="Vladich BuB - is an Ukrainian video-sharing website.">
+<meta name="author" content="Vlad Boichuk">
+<link type="text/css" href="main.css" rel="stylesheet" />
+
+</head>
+
+<body>
+<div class="container new_container">
+<div class="menu container new_container">
+<ul id="example1">
+<li><a href=" "><i class="fa fa-home"></i> Home</a></li>
+<li><a href="tasks.html"><i class="fa fa-video-camera" aria-hidden="true"></i> Entities</a></li>
+<li><a href="users.html"><i class="fa fa-users" aria-hidden="true"></i> Users</a></li>
+<li><a href="#main_footer"><i class="fa fa-info-circle" aria-hidden="true"></i> About</a></li>
+</ul>
+</div> 
+
+<main class="container new_container">
+<h1 class="text" >VLA<br>DI<br>CH<br>BUB</h1>
+</main>
+</div>
+<footer id ="main_footer">
+
+<div>
+<p class="text">ABOUT<br>US</p>
+</div>
+<div class="container">
+<p class="simple_text"> Vlad Boichuk is one of the best people in thw world Vlad Boichuk is one of the
+best people in thw world Vlad Boichuk is one of the best people in thw world Vlad Boichuk is one of
+the best people in thw worldVlad Boichuk is one of the best people in thw worldVlad Boichuk is one
+of the best people in thw world</p>
+</div>
+
+</footer>
+
+
+</body>
+
+</html>
+
+
+
+
+
+
+Users.html
+<!doctype html>
+<html lang="en">
+
+<head>
+<meta charset="utf-8">
+<title>Users</title>
+<meta name="description" content="apge with all users">
+<link type="text/css" href="main.css" rel="stylesheet" />
+<link rel="stylesheet" href="css/font-awesome.css">
+<link type="text/css" href="user_entites.css" rel="stylesheet" />
+</head>
+
+<body>
+<div class="container">
+<div class="menu container">
+<ul id="example1">
+<li><a href="index.html"><i class="fa fa-home"></i> Home</a></li>
+<li><a href="tasks.html"><i class="fa fa-video-camera" aria-hidden="true"></i> Entities</a></li>
+<li><a href="users.html"><i class="fa fa-users" aria-hidden="true"></i> Users</a></li>
+<li><a href="index.html#main_footer"><i class="fa fa-info-circle" aria-hidden="true"></i> About</a></li>
+</ul>
+</div>
+<main class="container">
+<h1 class="text">USE<br>RS</h1>
+</main>
+<table class="container">
+<tr>
+<th>Login</th>
+<th>Fullname</th>
+<th>Registered</th>
+</tr>
+<tr>
+<td><a href="users/1.html"><i class="fa fa-link" aria-hidden="true"></i>
+Vladichka228</a></td>
+<td>Vlad Boichuk</td>
+<td><time datetime="2019-09-07 16:34">7/9/2019 16:34</time></td>
+</tr>
+<tr>
+<td><a href="users/2.html"> <i class="fa fa-link" aria-hidden="true"></i>
+Jone Cena</a></td>
+<td>Jone Cena jr.</td>
+<td><time datetime="2019-09-07 16:35">7/9/2019 16:35</time></td>
+</tr>
+</table>
+</div>
+
+</body>
+
+</html>
+
+
+
+User1.html
+<!doctype html>
+<html lang="en">
+
+<head>
+<meta charset="utf-8">
+<title>1 user page</title>
+<link rel="stylesheet" href="../css/font-awesome.css">
+<link type="text/css" href="../main.css" rel="stylesheet" />
+<link type="text/css" href="../user_entites.css" rel="stylesheet" />
+</head>
+
+<body>
+
+<div class="container">
+<div class="menu container">
+<ul id="example1">
+<li><a href="../index.html"><i class="fa fa-home"></i> Home</a></li>
+<li><a href="../tasks.html"><i class="fa fa-video-camera" aria-hidden="true"></i> Entities</a></li>
+<li><a href="../users.html"><i class="fa fa-users" aria-hidden="true"></i> Users</a></li>
+<li><a href="../index.html#main_footer"><i class="fa fa-info-circle" aria-hidden="true"></i> About</a>
+</li>
+</ul>
+</div>
+<main class="user_main container adapt">
+<img src="../images/user1.jpg" class="adapt" >
+<button class="button_user adapt">
+<span class="passive_button"><i class="fa fa-user-secret" aria-hidden="true"></i>
+Secret</span>
+<span class="active_button"><i class="fa fa-eye" aria-hidden="true"></i>
+This is secret information! Please be careful!
+</span>
+</button>
+</main>
+<table class="container">
+<tr>
+<th>Login</th>
+<th>Fullname</th>
+<th>Registered</th>
+</tr>
+<tr>
+<td><a href=""><i class="fa fa-link" aria-hidden="true"></i> Vladichka228</a></td>
+<td>Vlad Boichuk</td>
+<td><time datetime="2019-09-07 16:34">7/9/2019 16:34</time></td>
+</tr>
+</table>
+</div>
+
+</body>
+
+</html>
+
+
+
+User2.html
+
+<!doctype html>
+<html lang="en">
+
+<head>
+<meta charset="utf-8">
+<title>1 user page</title>
+<link rel="stylesheet" href="../css/font-awesome.css">
+<link type="text/css" href="../main.css" rel="stylesheet" />
+<link type="text/css" href="../user_entites.css" rel="stylesheet" />
+</head>
+
+<body>
+
+<div class="container">
+<div class="menu container">
+<ul id="example1">
+<li><a href="../index.html"><i class="fa fa-home"></i> Home</a></li>
+<li><a href="../tasks.html"><i class="fa fa-video-camera" aria-hidden="true"></i> Entities</a></li>
+<li><a href="../users.html"><i class="fa fa-users" aria-hidden="true"></i> Users</a></li>
+<li><a href="../index.html#main_footer"><i class="fa fa-info-circle" aria-hidden="true"></i> About</a>
+</li>
+</ul>
+</div>
+<main class="user_main container adapt">
+<img src="../images/user1.jpg" class="adapt" >
+<button class="button_user adapt">
+<span class="passive_button"><i class="fa fa-user-secret" aria-hidden="true"></i>
+Secret</span>
+<span class="active_button"><i class="fa fa-eye" aria-hidden="true"></i>
+This is secret information! Please be careful!
+</span>
+</button>
+</main>
+<table class="container">
+<tr>
+<th>Login</th>
+<th>Fullname</th>
+<th>Registered</th>
+</tr>
+<tr>
+<td><a href=""><i class="fa fa-link" aria-hidden="true"></i> Vladichka228</a></td>
+<td>Vlad Boichuk</td>
+<td><time datetime="2019-09-07 16:34">7/9/2019 16:34</time></td>
+</tr>
+</table>
+</div>
+
+</body>
+
+</html>
+
+
+Tasks.html
+
+<!doctype html>
+<html lang="en">
+
+<head>
+<meta charset="utf-8">
+<title>MY FIRST SITE</title>
+<meta name="description" content="MY FIRST SITE DESCRIPTION">
+<meta name="author" content="MY NAME">
+<link type="text/css" href="main.css" rel="stylesheet" />
+<link rel="stylesheet" href="css/font-awesome.css">
+<link type="text/css" href="user_entites.css" rel="stylesheet" />
+</head>
+
+<body>
+<div class="container">
+
+<div class="menu container">
+<ul id="example1">
+<li><a href="index.html"><i class="fa fa-home"></i> Home</a></li>
+<li><a href=" "><i class="fa fa-video-camera" aria-hidden="true"></i> Entities</a></li>
+<li><a href="users.html"><i class="fa fa-users" aria-hidden="true"></i> Users</a></li>
+<li><a href="index.html#main_footer"><i class="fa fa-info-circle" aria-hidden="true"></i> About</a></li>
+</ul>
+</div>
+<main class="container">
+<h1 class="text">ENT<br>TI<br>TIES</h1>
+</main>
+<table class="container">
+<tr>
+<th>Video name</th>
+<th>Short description</th>
+</tr>
+<tr>
+<td><a href="tasks/1.html"><i class="fa fa-video-camera" aria-hidden="true"></i>
+Dancing parrot</a></td>
+<td>Parrot who dances </td>
+</tr>
+<tr>
+<td><a href="tasks/2.html"><i class="fa fa-video-camera" aria-hidden="true"></i>
+Legeza exam</a></td>
+<td>we are trying to pass<br> Legeza's exam</td>
+</tr>
+</table>
+</div>
+
+
+
+
+
+</body>
+
+</html>
+
+
+
+
+
+Task1.html
+<!doctype html>
+<html lang="en">
+
+<head>
+<meta charset="utf-8">
+<title>Video entity</title>
+<meta name="description" content="this ">
+<meta name="author" content="MY NAME">
+<link type="text/css" href="../main.css" rel="stylesheet" />
+<link rel="stylesheet" href="../css/font-awesome.css">
+<link type="text/css" href="../user_entites.css" rel="stylesheet" />
+</head>
+
+<body> 
+<div class="container">
+<div class="menu container">
+<ul id="example1">
+<li><a href="../index.html"><i class="fa fa-home"></i> Home</a></li>
+<li><a href="../tasks.html"><i class="fa fa-video-camera" aria-hidden="true"></i> Entities</a></li>
+<li><a href="../users.html"><i class="fa fa-users" aria-hidden="true"></i> Users</a></li>
+<li><a href="../index.html#main_footer"><i class="fa fa-info-circle" aria-hidden="true"></i> About</a>
+</li>
+</ul>
+<video src = "../videos/dancing.mp4" class ="container" controls alt="lol"></video> 
+<div class="container videoDescription">
+<p class="text description container videoDescription">Description</p>
+<p class="simple_text container videoDescription"> Your small description about this video could be here Your small description about this video could be here</p>
+</div>
+
+</div>
+
+</div> 
+
+
+
+<!-- <main class="description_section">
+<p class="text description">Description</p>
+<p class="simple_text"> Your small description about this video could be here Your small description about this video could be here</p>
+</main> -->
+</body>
+
+</html>
+
+
+
+
+
+
+Task2.html
+<!doctype html>
+<html lang="en">
+
+<head>
+<meta charset="utf-8">
+<title>Video entity</title>
+<meta name="description" content="this ">
+<meta name="author" content="MY NAME">
+<link type="text/css" href="../main.css" rel="stylesheet" />
+<link rel="stylesheet" href="../css/font-awesome.css">
+<link type="text/css" href="../user_entites.css" rel="stylesheet" />
+</head>
+
+<body> 
+<div class="container">
+<div class="menu container">
+<ul id="example1">
+<li><a href="../index.html"><i class="fa fa-home"></i> Home</a></li>
+<li><a href="../tasks.html"><i class="fa fa-video-camera" aria-hidden="true"></i> Entities</a></li>
+<li><a href="../users.html"><i class="fa fa-users" aria-hidden="true"></i> Users</a></li>
+<li><a href="../index.html#main_footer"><i class="fa fa-info-circle" aria-hidden="true"></i> About</a>
+</li>
+</ul>
+<video src = "../videos/legeza.mp4" class ="container" controls alt="lol"></video> 
+<div class="container videoDescription">
+<p class="text description container videoDescription">Description</p>
+<p class="simple_text container videoDescription"> Your small description about this video could be here Your small description about this video could be here</p>
+</div>
+
+</div>
+
+</div> 
+
+
+
+<!-- <main class="description_section">
+<p class="text description">Description</p>
+<p class="simple_text"> Your small description about this video could be here Your small description about this video could be here</p>
+</main> -->
+</body>
+
+</html>
+
+
+
+
+
+Main.css
+body {
+background-color:rgb(53, 56, 57) 
+} 
+@font-face{
+font-family: 'lol';
+src: url(../../../../fonts/OpenSans-LightItalic.ttf);
+}
+.menu {
+min-width: 400px;
+}
+.menu > ul{
+justify-content: center ;
+}
+.menu > ul li {
+list-style-type: none; 
+}
+.menu >ul li a {
+border-radius: 20px;
+list-style-type: none;
+display : block;
+background-color:rgb(53, 56, 57);
+padding: 15px 30px 15px 40px;
+width: 150px; 
+color:white;
+font-family: lol;
+font-size: 30px;
+font-weight: bold;
+text-decoration: none;
+line-height: 2cm;
+
+}
+.menu a:hover {
+background: white;
+transition: all 0.7s ease; 
+color: black;
+}
+.simple_text{
+font-family: 'Courier New', Courier, monospace;
+color:white;
+font-size: 20px;
+background-color:none;
+border-radius: 15px;
+}
+
+.container {
+display: flex;
+flex-direction: row; 
+margin-top: 50px;
+}
+.container h1 {
+display: flex;
+flex-direction: row;
+margin-right:100px;
+margin-top: 0px;
+}
+
+footer{
+margin-top: 300px;
+width:100%;
+flex-direction: column;
+border-top-left-radius: 30px;
+border-top-right-radius: 30px;
+background-color:rgb(152, 143, 143);
+}
+hr{
+border: none; 
+background-color: white;
+height: 2px;
+}
+footer{
+padding-bottom: 20px;
+}
+footer div{
+flex-direction: column;
+margin-top:100px; 
+}
+.new_container{
+justify-content: start;
+}
+.adapt{
+flex-direction: column;
+margin-top: 50px;
+}
+div .container .videoDescription{
+flex-direction: column;
+margin-left: 50px;
+
+} 
+
+.text {
+font-family: Tahoma, Verdana, sans-serif;
+color: white;
+direction: rtl;
+letter-spacing: 2.5cm;
+word-spacing: 1cm;
+text-indent: 10px;
+text-decoration: none;
+text-transform: capitalize;
+white-space: pre;
+font-size: 100px;
+font-weight: bold;
+line-height: 1.5em;
+text-align: left;
+src: url(../../../../fonts/OpenSans-LightItalic.ttf);
+}
+
+
+
+users_entities.css
+.main_users{
+bottom: 350px;
+width: 610px;
+}
+table {
+border-radius: 25px;
+font-family: Tahoma, Verdana, sans-serif;
+font-size: 25px;
+color: white;
+}
+table th {
+border-radius: 25px;
+text-align: center; 
+padding: 60px; 
+
+}
+table td {
+border-radius: 25px;
+text-align: center;
+padding: 60px;
+}
+table a{
+color :grey;
+border-radius: 5px;
+text-decoration: none;
+}
+table td:hover{
+background-color: white;
+transition: 0.5s;
+color:black;
+}
+table th:hover{
+background-color: white;
+transition: 0.5s;
+color:black;
+}
+table a:hover{
+
+transition: 0.5s;
+font-weight: bold;
+color:black;
+}
+
+video{
+border-radius: 25px;
+margin-left: 250px;
+width:500px;
+
+}
+
+.user_main{ 
+border-radius: 30px; 
+border: 3px solid black;
+}
+.user_main > img{
+width:300px;
+height:300px; 
+border-radius: 50%;
+margin-left: 45px;
+margin-top: 0px;
+border: 1px solid black;
+}
+
+.button_user{
+
+width:400px;
+height:100px;
+border-radius: 30px;
+background-color: black;
+color:white; 
+font-size: 30px;
+text-align: center;
+}
+.container_button{
+display: flex;
+flex-direction: column;
+}
+button .active_button{
+text-align: center;
+display: none;
+
+}
+button:hover .passive_button{
+display: none;
+}
+button:hover .active_button{
+display: inline;
+}
+
+
+#example1 { margin: 0 0 0 0; }
+
+h1 {font-family: lol;
+font-weight: bold;
+font-size: 30px;
+}
+.description {
+letter-spacing: 0.1cm;
+line-height: 1cm;
+font-weight: normal;
+font-size: 50px;
+border-radius: 15px;
+
+}
+.description_section{
+width: 400px; 
+} 
+.description_section p:hover{
+background-color: white;
+color:black;
+transition: 0.3s;
+}
+
+
+
+
+
+Приклади результатів
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+На рисунках зображено приклади результатів  .
+
+
+
+
+
+
+
+
+Висновки
+  
+Я ознайомився з мовою розмитки html  та з css  мовою опису зовнишнього виду документа
+
