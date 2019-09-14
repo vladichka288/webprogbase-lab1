@@ -40,160 +40,6 @@
              color: black;
              
              }
-
-            
-            .main_users{
-              bottom: 350px;
-              width: 610px;
-            }
-            table {
-              
-              border-radius: 25px;
-              font-family: Tahoma, Verdana,  sans-serif;
-              font-size: 25px;
-              color: white;
-            }
-            table th {
-             
-            border-radius: 25px;
-            text-align: center;    
-            padding: 60px;   
-
-            }
-            table td {
-             
-              border-radius: 25px;
-              text-align: center;
-              padding: 60px;
-            
-            }
-            table a{
-              color :grey;
-              border-radius: 5px;
-              text-decoration: none;
-            }
-          table td:hover{
-            background-color: white;
-            transition: 0.5s;
-            color:black;
-          }
-          table th:hover{
-            background-color: white;
-            transition: 0.5s;
-            color:black;
-          }
-          table a:hover{
-          
-            transition: 0.5s;
-            font-weight: bold;
-            color:black;
-            
-          }
-          
-          video{
-            border-radius: 25px;
-            margin-left: 250px;
-            width:500px;
-
-          }
-
-         
-          .user_main{            
-            border-radius: 30px;           
-            border: 3px solid black;
-          }
-          .user_main > img{
-              
-              width:300px;
-              height:300px;  
-              border-radius: 50%;
-              margin-left: 45px;
-              margin-top: 0px;
-                     
-              border: 1px solid black;
-          }
-
-           .button_user{
-          
-            
-            width:400px;
-            height:100px;
-            border-radius: 30px;
-            background-color: black;
-            color:white;  
-            font-size: 30px;
-            text-align: center;
-            
-                    
-           }
-            .container_button{
-            display: flex;
-            flex-direction: column;
-           }
-           
-           button .active_button{
-             text-align: center;
-            display: none;
-      
-           }
-           button:hover .passive_button{
-            
-            display: none;
-            
-           }
-           button:hover .active_button{
-            display: inline;
-            
-           }
-          
-
-           
-            
-
-
-            #example1 { margin: 0 0 0 0; }
-          
-           
-            h1 {font-family: lol;
-               font-weight: bold;
-               font-size: 30px;
-              }
-             
-              .text {
-                font-family: Tahoma, Verdana,  sans-serif;
-                color: white;
-                direction: rtl;
-                letter-spacing: 2.5cm;
-                word-spacing: 1cm;
-                text-indent: 10px;
-                text-decoration: none;
-                text-transform: capitalize;
-                white-space: pre;
-                font-size: 100px;
-                font-weight: bold;
-                
-                line-height: 1.5em;
-                text-align: left;
-                
-                src: url(../../../../fonts/OpenSans-LightItalic.ttf);
-            }
-            .description {
-              letter-spacing: 0.1cm;
-              line-height: 1cm;
-              font-weight: normal;
-              font-size: 50px;
-              border-radius: 15px;
-              
-              
-
-            }
-            .description_section{
-              width: 400px;
-              
-             
-                    
-            }
-
              .simple_text{
               font-family: 'Courier New', Courier, monospace;
               color:white;
@@ -202,11 +48,20 @@
               border-radius: 15px;
              
             }
-            .description_section p:hover{
-              background-color: white;
-              color:black;
-              transition: 0.3s;
+
+            .container {
+              display: flex;
+              flex-direction: row;              
+              margin-top: 50px;
             }
+            .container h1 {
+              display: flex;
+              flex-direction: row;
+              margin-right:100px;
+              margin-top: 0px;
+            }
+
+
             footer{
               margin-top: 300px;
               width:100%;
@@ -226,17 +81,7 @@
             footer{
               padding-bottom: 20px;
             }
-            .container {
-              display: flex;
-              flex-direction: row;              
-              margin-top: 50px;
-            }
-            .container h1 {
-              display: flex;
-              flex-direction: row;
-              margin-right:100px;
-              margin-top: 0px;
-            }
+           
             
             footer div{
               flex-direction: column;
@@ -254,4 +99,31 @@
               margin-left: 50px;
 
             } 
-           
+
+            .text {
+              font-family: Tahoma, Verdana,  sans-serif;
+              color: white;
+              direction: rtl;
+              letter-spacing: 2.5cm;
+              word-spacing: 1cm;
+              text-indent: 10px;
+              text-decoration: none;
+              text-transform: capitalize;
+              white-space: pre;
+              font-size: 100px;
+              font-weight: bold;
+              line-height: 1.5em;
+              text-align: left;
+              
+              src: url(../../../../fonts/OpenSans-LightItalic.ttf);
+          }
+
+
+
+
+
+
+
+
+
+          
